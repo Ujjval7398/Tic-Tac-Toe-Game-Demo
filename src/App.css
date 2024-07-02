@@ -1,7 +1,39 @@
 .App {
+  z-index: -1;
   text-align: center;
 }
+ul.topnav {
+  position: sticky;
+  top: 0xp;
+  display: flex;
+  width:100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
+/* ul.topnav li {float: left;} */
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +67,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  background-color: #251c1c;
+  padding: 10px;
+  text-align: center;
+  color: rgb(249, 244, 244);
+  font-size: larger;
+}
+
+:root{
+  --yellow: yellow;
+}
+.grid{
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
+  width: 500px;
+  flex-wrap: wrap;
+  align-items: center;
+
 }
